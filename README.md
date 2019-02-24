@@ -171,7 +171,7 @@ Add code to use tensorboard for visualizing a) Training loss, b) Learning rate, 
 
 Use the same hyperparameter settings from Task 2, and try to train the model. 
 
-#### Q 3.1 Add screenshots of training, testing MAP curves, learning rate, histograms of gradients and examples of training images from TensorBoard.
+#### Q 3.1 Add screenshots of training loss, testing MAP curves, learning rate, histograms of gradients and examples of training images from TensorBoard.
 
 ## Task 4: Standing on the shoulder of the giants: finetuning from ImageNet (20 points)
 As we have already seen, deep networks can sometimes be hard to optimize, while other times lead to heavy overfitting on small training sets. Many approaches have been proposed to counter this, eg, [Krahenbuhl et al. (ICLR'16)](http://arxiv.org/pdf/1511.06856.pdf) and other works we have seen in un-/self-supervised learning. However, the most effective approach remains pre-training the network on large, well-labeled datasets such as ImageNet. While training on the full ImageNet data is beyond the scope of this assignment, people have already trained many popular/standard models and released them online. In this task, we will initialize the VGG model from the previous task with pre-trained ImageNet weights, and *finetune* the network for PASCAL classification. 
@@ -188,7 +188,7 @@ Copy over your code from `02_pascal.py` to `05_pascal_vgg_finetune.py` and modif
 Load the pre-trained weights upto fc7 layer, and initialize fc8 weights and biases from scratch. Then train the network as before. You may use funtions such as `tf.keras.utils.get_file`, `
 tf.keras.models.load_weights`. Since the pretrained model might use different names for the weights, you need to figure out how to load the weights correctly.
 
-#### Q4.1: Use similar hyperparameter setup as in the scratch case, however, let the learning rate start from 0.0001, and decay by 0.5 every 1K iterations. Show the learning curves (training and testing loss, testing MAP) for 10 epochs. Please evaluate your model to calculate the MAP on the testing dataset every 60 iterations. 
+#### Q4.1: Use similar hyperparameter setup as in the scratch case, however, let the learning rate start from 0.0001, and decay by 0.5 every 1K iterations. Show the learning curves (training loss, testing MAP) for 10 epochs. Please evaluate your model to calculate the MAP on the testing dataset every 60 iterations. 
 
 ## Task 5: Analysis (20 points)
 
