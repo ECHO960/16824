@@ -171,7 +171,7 @@ Add code to use tensorboard for visualizing a) Training loss, b) Learning rate, 
 
 Use the same hyperparameter settings from Task 2, and try to train the model. 
 
-#### Q 3.1 Add screenshots of training and testing loss, testing MAP curves, learning rate, histograms of gradients and examples of training images from TensorBoard.
+#### Q 3.1 Add screenshots of training, testing MAP curves, learning rate, histograms of gradients and examples of training images from TensorBoard.
 
 ## Task 4: Standing on the shoulder of the giants: finetuning from ImageNet (20 points)
 As we have already seen, deep networks can sometimes be hard to optimize, while other times lead to heavy overfitting on small training sets. Many approaches have been proposed to counter this, eg, [Krahenbuhl et al. (ICLR'16)](http://arxiv.org/pdf/1511.06856.pdf) and other works we have seen in un-/self-supervised learning. However, the most effective approach remains pre-training the network on large, well-labeled datasets such as ImageNet. While training on the full ImageNet data is beyond the scope of this assignment, people have already trained many popular/standard models and released them online. In this task, we will initialize the VGG model from the previous task with pre-trained ImageNet weights, and *finetune* the network for PASCAL classification. 
